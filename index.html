@@ -1,30 +1,76 @@
-<!DOCTYPE html> 
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <title>Blueberry</title>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <title>BlueBerry</title>
   <style>
-    body {
+    /* Reset y estilos base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
       font-family: sans-serif;
-      background-color: #f8f8f8;
-      text-align: center;
-      padding: 30px;
     }
 
-    img.logo {
-      max-width: 500px;
-      margin-bottom: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+    /* Fondo imagen */
+    body {
+      background-image: url('img/log.png');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      position: relative;
+      color: white;
+    }
+
+    /* Capa oscura para mejorar contraste */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+
+    /* Contenedor del texto */
+    .texto {
+      position: absolute;
+      bottom: 40px;
+      width: 100%;
+      text-align: center;
+      z-index: 1;
+      padding: 0 20px;
+    }
+
+    .texto h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+
+    .texto p {
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+
+    /* Responsive para móviles */
+    @media (max-width: 600px) {
+      .texto h1 {
+        font-size: 2rem;
+      }
+      .texto p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="img/log.png" alt="Logo de Blueberry" class="logo">
-  <h2>BlueBerry Comunicación</h2>
-  <p>En mantenimiento, nos vemos pronto.</p>
+  <div class="texto">
+    <h1>BlueBerry Comunicación</h1>
+    <p>En mantenimiento, nos vemos pronto.</p>
+  </div>
 </body>
 </html>
+
