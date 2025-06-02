@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>BlueBerry</title>
+  <title>BlueBird Comunicación</title>
   <style>
     /* Reset y estilos base */
     * {
@@ -15,7 +15,7 @@
       font-family: sans-serif;
     }
 
-    /* Fondo imagen */
+    /* Fondo imagen por defecto (escritorio) */
     body {
       background-image: url('img/log.png');
       background-size: cover;
@@ -58,8 +58,9 @@
     /* Responsive para móviles */
     @media (max-width: 600px) {
       body {
-        background-size: contain;
-        background-position: center top;
+        background-image: url('img/log-mobile.png'); /* Imagen optimizada */
+        background-size: cover;
+        background-position: center center;
         background-repeat: no-repeat;
       }
 
@@ -75,7 +76,7 @@
 </head>
 <body>
   <div class="texto">
-    <h1>BlueBerry Comunicación</h1>
+    <h1>BlueBird Comunicación</h1>
     <p>En mantenimiento, nos vemos pronto.</p>
   </div>
 </body>
